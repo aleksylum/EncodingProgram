@@ -85,7 +85,7 @@ namespace EncodingProgram
             {
                 return UserDialog.ReportAboutEmptyInitialData();
             }
-            return false;
+            return true;
         }
 
     }
