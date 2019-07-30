@@ -17,9 +17,9 @@ namespace EncodingProgram
             {
                 res.Add((Char)((arr[i + 1] << 8) | arr[i]));
             }
-
             return res;
         }
+
         public Byte[] ConvertFromChars(List<Char> list)
         {
             Byte[] res = new Byte[checked(list.Count * 2)];
@@ -35,6 +35,7 @@ namespace EncodingProgram
         {
             return Bom;
         }
+
         public EEncodingMode GetMode()
         {
             return Mode;

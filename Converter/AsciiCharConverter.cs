@@ -9,8 +9,8 @@ namespace EncodingProgram
         public static readonly Byte[] Bom = new Byte[0];
         public static readonly EEncodingMode Mode = EEncodingMode.Ascii;
 
-        Dictionary<Byte, Char> _ascii1251ToChar;
-        Dictionary<Char, Byte> _charToAscii1251;
+        private Dictionary<Byte, Char> _ascii1251ToChar;
+        private Dictionary<Char, Byte> _charToAscii1251;
 
         public AsciiCharConverter()
         {
@@ -149,7 +149,6 @@ namespace EncodingProgram
 
         public List<char> ConvertToChars(Byte[] arr)
         {
-
             List<Char> res = new List<char>(arr.Length);
 
             foreach (var v in arr)
@@ -165,6 +164,7 @@ namespace EncodingProgram
             }
             return res;
         }
+
 
         public Byte[] ConvertFromChars(List<char> list)
         {
@@ -189,6 +189,7 @@ namespace EncodingProgram
         {
             return Bom;
         }
+
         public EEncodingMode GetMode()
         {
             return Mode;

@@ -5,11 +5,11 @@ namespace EncodingProgram
 {
     class EncodingProgram
     {
-        public List<Char> readChars { get; private set; }
+        public List<Char> ReadChars { get; private set; }
 
         public EncodingProgram()
         {
-            readChars = new List<Char>();
+            ReadChars = new List<Char>();
         }
 
         public void Start()
@@ -48,9 +48,9 @@ namespace EncodingProgram
             if (!String.IsNullOrEmpty(path))
             {
                 Decoder decoder = Decoder.CreateDecoder(path, out EEncodingMode encodingMode);
-                readChars = decoder.DecodeDataFromFile();
+                ReadChars = decoder.DecodeDataFromFile();
                 UserDialog.ReportAboutSuccessReading(path, encodingMode);
-                UserDialog.PrintResult(readChars);
+                UserDialog.PrintResult(ReadChars);
             }
         }
 
@@ -62,7 +62,7 @@ namespace EncodingProgram
             {
                 EEncodingMode encodingMode = UserDialog.TakeEncodingModeFromUser();
                 Encoder encoder = Encoder.CreateEncoder(path, encodingMode);
-                encoder.WriteDataToFile(readChars);
+                encoder.WriteDataToFile(ReadChars);
                 UserDialog.ReportAboutSuccessWriting(path, encodingMode);
             }
         }
@@ -81,7 +81,7 @@ namespace EncodingProgram
 
         private Boolean CheckInitialData()
         {
-            if (readChars.Count == 0)
+            if (ReadChars.Count == 0)
             {
                 return UserDialog.ReportAboutEmptyInitialData();
             }

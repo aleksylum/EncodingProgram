@@ -48,12 +48,10 @@ Press any key to exit.
             }
         }
 
-
         public static String TakePathFromUser()
         {
             Console.WriteLine(@"Input file path.");
             return Console.ReadLine();
-            //return $@"{Console.ReadLine()}";
         }
 
 
@@ -98,7 +96,7 @@ Press any key to exit.
 
         public static Boolean ReportAboutEmptyInitialData()
         {
-            Console.WriteLine("Your initial data is empty. You really want to create empty file? Y/N");// Please, decode data from file first.
+            Console.WriteLine("Your initial data is empty. You really want to create empty file? Y/N");
             return CheckUserAnswer();
         }
 

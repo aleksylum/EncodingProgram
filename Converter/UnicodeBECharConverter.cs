@@ -17,7 +17,6 @@ namespace EncodingProgram
             for (Int32 i = 0; i < arr.Length; i += 2)
             {
                 res.Add((char)((arr[i] << 8) | arr[i + 1]));
-
             }
             return res;
         }

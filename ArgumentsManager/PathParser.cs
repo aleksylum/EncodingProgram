@@ -26,6 +26,7 @@ namespace EncodingProgram
                 return null;
             }
         }
+
         private void IsNullOrEmptyPath(String path)
         {
             if (String.IsNullOrEmpty(path))
@@ -33,6 +34,7 @@ namespace EncodingProgram
                 throw new ArgumentException("Empty file name.");
             }
         }
+
         private void Validate(String path)
         {
             if (_mode == EProgramMode.Decoder)
